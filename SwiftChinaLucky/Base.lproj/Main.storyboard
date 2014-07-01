@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="RootViewController" customModule="SwiftChinaLucky" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="WcM-ZA-mkO">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-L7-d3E">
+                                <rect key="frame" x="987" y="678" width="22" height="22"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ddy-0p-0Vg" kind="modal" id="5iW-41-xB3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSk-bl-up2" customClass="LTMorphingLabel" customModule="SwiftChinaLucky" customModuleProvider="target">
+                                <rect key="frame" x="500" y="330" width="24" height="108"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mp4-k8-e5G">
+                                <rect key="frame" x="454" y="524" width="120" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="我要中奖"/>
+                                <connections>
+                                    <action selector="onClickPickerRandomNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QaP-92-VNS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="350" translatesAutoresizingMaskIntoConstraints="NO" id="FJp-rO-sV1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="Hgb-dH-9aI"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="600" id="W3Q-z3-oZX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POP-Os-6ZT">
+                                <rect key="frame" x="974" y="35" width="30" height="30"/>
+                                <state key="normal" title="重来">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickReset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ILv-SN-BFq"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="uclogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="lkl-lk-KvW">
+                                <rect key="frame" x="724" y="702" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="4rq-8c-C1A"/>
+                                    <constraint firstAttribute="height" constant="40" id="xD1-Mb-MhW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="mSk-bl-up2" secondAttribute="centerX" id="3zd-Wy-I92"/>
+                            <constraint firstAttribute="trailing" secondItem="WcM-ZA-mkO" secondAttribute="trailing" id="85Z-go-y1q"/>
+                            <constraint firstAttribute="trailing" secondItem="fhh-L7-d3E" secondAttribute="trailing" constant="15" id="9LH-RY-T0X"/>
+                            <constraint firstItem="WcM-ZA-mkO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="BrM-ms-lZl"/>
+                            <constraint firstAttribute="trailing" secondItem="POP-Os-6ZT" secondAttribute="trailing" constant="20" id="ETq-I7-wxO"/>
+                            <constraint firstAttribute="centerY" secondItem="mSk-bl-up2" secondAttribute="centerY" id="Frl-86-77f"/>
+                            <constraint firstItem="Mp4-k8-e5G" firstAttribute="top" secondItem="mSk-bl-up2" secondAttribute="bottom" constant="86" id="HhZ-du-eAG"/>
+                            <constraint firstItem="POP-Os-6ZT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="Loh-9l-HDd"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="fhh-L7-d3E" secondAttribute="bottom" constant="68" id="PIw-3w-lnE"/>
+                            <constraint firstAttribute="bottom" secondItem="WcM-ZA-mkO" secondAttribute="bottom" id="aJZ-21-xEp"/>
+                            <constraint firstItem="WcM-ZA-mkO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="cQl-DD-ubN"/>
+                            <constraint firstAttribute="trailing" secondItem="FJp-rO-sV1" secondAttribute="trailing" constant="20" id="lL7-MH-W3A"/>
+                            <constraint firstItem="lkl-lk-KvW" firstAttribute="leading" secondItem="WcM-ZA-mkO" secondAttribute="trailing" constant="-300" id="lfO-fe-VSm"/>
+                            <constraint firstAttribute="centerX" secondItem="Mp4-k8-e5G" secondAttribute="centerX" constant="-1.5" id="qEH-TB-kuW"/>
+                            <constraint firstItem="lkl-lk-KvW" firstAttribute="top" secondItem="WcM-ZA-mkO" secondAttribute="bottom" constant="-66" id="tz1-g5-FEA"/>
+                            <constraint firstItem="FJp-rO-sV1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="36" id="yRf-jg-LqR"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <connections>
+                        <outlet property="randomNum" destination="mSk-bl-up2" id="Myu-Qg-dyX"/>
+                        <outlet property="resultLabel" destination="FJp-rO-sV1" id="85Q-7k-A7d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Max Number View Controller-->
+        <scene sceneID="CLV-dP-7Mm">
+            <objects>
+                <viewController id="PEX-Te-GwJ" customClass="MaxNumberViewController" customModule="SwiftChinaLucky" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="408-NO-Efp"/>
+                        <viewControllerLayoutGuide type="bottom" id="QA2-0u-JiC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5XE-DI-QTG">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="在场人数" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qY6-WT-yWP">
+                                <rect key="frame" x="20" y="136" width="984" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="PEX-Te-GwJ" id="1EJ-3w-Tyz"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="抽几人" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WaK-md-ID7">
+                                <rect key="frame" x="20" y="195" width="984" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="PEX-Te-GwJ" id="1Iz-n6-DUG"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WaK-md-ID7" secondAttribute="trailing" constant="20" id="0DZ-2u-3Qh"/>
+                            <constraint firstItem="WaK-md-ID7" firstAttribute="leading" secondItem="5XE-DI-QTG" secondAttribute="leading" constant="20" id="JNv-Ln-dGt"/>
+                            <constraint firstAttribute="trailing" secondItem="qY6-WT-yWP" secondAttribute="trailing" constant="20" id="NtH-3Q-Pib"/>
+                            <constraint firstItem="qY6-WT-yWP" firstAttribute="top" secondItem="408-NO-Efp" secondAttribute="bottom" constant="72" id="jRZ-S6-Rkl"/>
+                            <constraint firstItem="WaK-md-ID7" firstAttribute="top" secondItem="qY6-WT-yWP" secondAttribute="bottom" constant="29" id="mby-H0-x8f"/>
+                            <constraint firstItem="qY6-WT-yWP" firstAttribute="leading" secondItem="5XE-DI-QTG" secondAttribute="leading" constant="20" id="xu8-ws-eaZ"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Sg-yL-ytj">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="2vD-jW-xei">
+                            <connections>
+                                <action selector="onClickDone:" destination="PEX-Te-GwJ" id="6lg-Fm-dUl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="numTextField" destination="qY6-WT-yWP" id="1iR-gQ-qYY"/>
+                        <outlet property="pickNumTextField" destination="WaK-md-ID7" id="Uhi-cF-iLs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0k-3f-6qO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="984"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bVq-Ic-BHy">
+            <objects>
+                <navigationController id="Ddy-0p-0Vg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GVm-mb-yEr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PEX-Te-GwJ" kind="relationship" relationship="rootViewController" id="Wz0-bb-zIC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyB-B3-8bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="984"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.png" width="1024" height="768"/>
+        <image name="uclogo.png" width="200" height="43"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
